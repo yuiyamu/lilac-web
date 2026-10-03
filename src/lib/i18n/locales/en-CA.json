@@ -1,0 +1,6 @@
+{
+    "loadingSong":"retrieving song info...",
+    "lastFmListening":"currently listening to",
+    "lastFmListened":"last listened to",
+    "lastFmFail":"failed to retrieve lastfm info,, (๑-﹏-๑)"
+}

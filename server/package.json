@@ -1,0 +1,26 @@
+{
+  "name": "yuru-server-lilac",
+  "version": "1.0.0",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./main.d.ts"
+    }
+  },
+  "scripts": {
+    "dev": "npx tsx main.ts",
+    "build-": "tsc || true && cp -R page dist/"
+  },
+  "dependencies": {
+    "typescript": "5.8.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.0.1",
+    "express": "^5.1.0",
+    "multer": "^2.0.1",
+    "osu-colourizer": "^1.0.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3"
+  }
+}
