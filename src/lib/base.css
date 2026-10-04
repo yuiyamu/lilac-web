@@ -1,16 +1,7 @@
-@font-face { font-family: Kyokasho; src: url('/Kyokasho-min.ttf')}
+@font-face { font-family: Kyokasho; src: url('/Kyokasho-min.woff2') format('woff2')}
+@font-face { font-family: Zen Kaku Gothic New; src: url('ZenKakuGothicNew.woff2') format('woff2')}
 
 :root {
-    --sydney-main: #5a4969;
-    --sydney-light-accent: #41364b;
-    --sydney-accent: #312b35;
-
-    --lilac-main: #b798b8;
-
-    --hazel-main: #724653;
-
-    --may-main: #8ed369;
-
     --text: rgb(180 181 191);
     --link: rgb(100, 101, 112);
     --background: rgb(40 40 40);
