@@ -17,7 +17,9 @@
     }
 </script>
 
-<button class="fa fa-globe" onclick={() => openLocaleMenu()}>
+
+<button class="invis" onclick={() => openLocaleMenu()}>
+    <img src="/globe.svg" alt="translate" width="20px" height="20px" style="filter: invert(1);">
     <div class="locale-menu" style="display: {showLocaleMenu ? 'flex' : 'none'}">
         {#each pageLocales as lang}
             <div onclick={() => changeLocale(lang)}>
@@ -29,11 +31,10 @@
 </button>
 
 <style>
-    .fa-globe {
+    .invis {
         background-color: transparent;
         border: none;
         position: relative;
-        font-size: 22px;
         color: white;
         padding-right: 8px;
         cursor: pointer;

@@ -5,7 +5,6 @@
 </svelte:head>
 
 <script lang="ts">
-    import '#lib/base.css';
     import { _, locale } from 'svelte-i18n';
     import Locale from '#lib/Locale.svelte';
 
@@ -65,17 +64,21 @@
 
 <div id="background"></div>
 <header>
-    <a class="fa fa-github hidden-link" style="color: white; font-size: 23px;" href="https://github.com/yuiyamu/lilac-web" aria-label="github link"></a>
+    <a class="hidden-link" href="https://github.com/yuiyamu/lilac-web">
+        <img src="/github.svg" alt="github" width="20px" height="20px" style="filter: invert(1); margin-top: 1px;">
+    </a>
     <Locale/>
 </header>
 
 <section id="page" class={$locale}>
     <div id="info-box">
     <div id="mobile-button-box">
-        <a class="fa fa-github hidden-link" style="color: white; font-size: 23px;" href="https://github.com/yuiyamu/lilac-web" aria-label="github link"></a>
-            <Locale/>
+        <a class="hidden-link" href="https://github.com/yuiyamu/lilac-web">
+            <img src="/github.svg" alt="github" width="20px" height="20px" style="filter: invert(1); margin-top: 1px;">
+        </a>
+        <Locale/>
     </div>
-    <img id="non" src="/non.png" alt="chinoi momone">
+    <img id="non" src="/non.webp" alt="chinoi momone">
     <h2 id="title-container"><a href="/system">yurukyan△</a></h2>
 
     <div id="intro-container">
@@ -162,10 +165,38 @@
 </section>
 
 <style>
+    /* basic stuff, moving away from yuru base.css */
+    @font-face { font-family: Kyokasho; src: url('/Kyokasho-min.woff2') format('woff2')}
+    @font-face { font-family: Zen Kaku Gothic New; src: url('/ZenKakuGothicNew.woff2') format('woff2')}
+
     :root {
         --accent: #af8ebe;
+        --text: #b4b5bf;
+        --link: #646570;
     }
 
+    :global(body) {
+        background-color: rgb(40, 40, 40);
+        color: var(--text);
+        font-family: "Zen Kaku Gothic New", sans-serif;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    a {
+        color: var(--link);
+    } .dark-text {
+        color: var(--link);
+    }
+
+    .hidden-link {
+        color: var(--text);
+        text-decoration: none;
+    } .hidden-link a { /* applies to nested <a> as well */
+        text-decoration: none;
+    }
+
+    /* page stuff~ */
     #background {
         position: fixed;
         height: 100%;
@@ -213,9 +244,10 @@
     }
 
     #info-box {
+        position: relative;
         padding: 0 40px 40px 40px;
         border: 3px solid var(--accent);
-        backdrop-filter: brightness(0.5);
+        background-color: #00000080;
         border-radius: 15px;
         font-size: 18px;
     }
@@ -224,7 +256,7 @@
     #title-container {
         text-align: right;
     } #title-container a {
-        font-family: Kyokasho, sans-serif;
+        font-family: "Kyokasho", sans-serif;
         color: var(--accent);
         font-size: 32px;
         text-decoration: none;
@@ -315,7 +347,7 @@
 
     /* bottom rin */
     #shima-img {
-        background-image: url("/shima.jpg");
+        background-image: url("/shima.webp");
         background-size: cover;
         height: 230px;
         margin-top: 20px;
@@ -410,8 +442,8 @@
             justify-content: start;
             align-items: center;
             height: 30px;
-            margin-bottom: 0px;
-            margin-left: 5px;
+            margin-top: 5px;
+            margin-left: 8px;
         }
 
         header {
