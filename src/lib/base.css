@@ -1,5 +1,5 @@
 @font-face { font-family: Kyokasho; src: url('/Kyokasho-min.woff2') format('woff2')}
-@font-face { font-family: Zen Kaku Gothic New; src: url('ZenKakuGothicNew.woff2') format('woff2')}
+@font-face { font-family: Zen Kaku Gothic New; src: url('/ZenKakuGothicNew.woff2') format('woff2')}
 
 :root {
     --text: rgb(180 181 191);
